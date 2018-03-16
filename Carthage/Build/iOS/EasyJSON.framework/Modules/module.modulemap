@@ -1,0 +1,11 @@
+framework module EasyJSON {
+  umbrella header "EasyJSON.h"
+
+  export *
+  module * { export * }
+}
+
+module EasyJSON.Swift {
+    header "EasyJSON-Swift.h"
+    requires objc
+}

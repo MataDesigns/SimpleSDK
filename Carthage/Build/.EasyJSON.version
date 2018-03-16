@@ -1,0 +1,9 @@
+{
+  "commitish" : "0.4.3",
+  "iOS" : [
+    {
+      "name" : "EasyJSON",
+      "hash" : "19593c75f1ed43733368208830f3a506e4e5ea96415406b339279d7ff221a0a0"
+    }
+  ]
+}

@@ -10,6 +10,19 @@
 		A15A96DA205B488200332A55 /* SimpleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15A96D0205B488200332A55 /* SimpleSDK.framework */; };
 		A15A96DF205B488200332A55 /* SimpleSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A96DE205B488200332A55 /* SimpleSDKTests.swift */; };
 		A15A96E1205B488200332A55 /* SimpleSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = A15A96D3205B488200332A55 /* SimpleSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A166D0C4205B790A00E21D98 /* EasyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A166D0C2205B790A00E21D98 /* EasyJSON.framework */; };
+		A166D0C5205B790A00E21D98 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A166D0C3205B790A00E21D98 /* Alamofire.framework */; };
+		A166D0CA205B7A7800E21D98 /* SimpleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0C9205B7A7800E21D98 /* SimpleApi.swift */; };
+		A166D0CC205B7B3900E21D98 /* SimpleApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0CB205B7B3900E21D98 /* SimpleApiClient.swift */; };
+		A166D0D2205B7E9A00E21D98 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0CE205B7E9A00E21D98 /* Future.swift */; };
+		A166D0D3205B7E9A00E21D98 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0CF205B7E9A00E21D98 /* Result.swift */; };
+		A166D0D4205B7E9A00E21D98 /* SimpleApiStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0D0205B7E9A00E21D98 /* SimpleApiStorage.swift */; };
+		A166D0D5205B7E9A00E21D98 /* Alamofire+Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0D1205B7E9A00E21D98 /* Alamofire+Future.swift */; };
+		A166D0D7205B816300E21D98 /* SimpleSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0D6205B816300E21D98 /* SimpleSDK.swift */; };
+		A166D0DB205B86E800E21D98 /* SimpleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0DA205B86E800E21D98 /* SimpleModels.swift */; };
+		A166D0DD205B993300E21D98 /* PhilinqSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0DC205B993300E21D98 /* PhilinqSDK.swift */; };
+		A166D0DF205C341100E21D98 /* EasyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A166D0C2205B790A00E21D98 /* EasyJSON.framework */; };
+		A166D0E1205C3FB800E21D98 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A166D0C3205B790A00E21D98 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +42,17 @@
 		A15A96D9205B488200332A55 /* SimpleSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15A96DE205B488200332A55 /* SimpleSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSDKTests.swift; sourceTree = "<group>"; };
 		A15A96E0205B488200332A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A166D0C2205B790A00E21D98 /* EasyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyJSON.framework; path = Carthage/Build/iOS/EasyJSON.framework; sourceTree = "<group>"; };
+		A166D0C3205B790A00E21D98 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A166D0C9205B7A7800E21D98 /* SimpleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleApi.swift; sourceTree = "<group>"; };
+		A166D0CB205B7B3900E21D98 /* SimpleApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleApiClient.swift; sourceTree = "<group>"; };
+		A166D0CE205B7E9A00E21D98 /* Future.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
+		A166D0CF205B7E9A00E21D98 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A166D0D0205B7E9A00E21D98 /* SimpleApiStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleApiStorage.swift; sourceTree = "<group>"; };
+		A166D0D1205B7E9A00E21D98 /* Alamofire+Future.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Future.swift"; sourceTree = "<group>"; };
+		A166D0D6205B816300E21D98 /* SimpleSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSDK.swift; sourceTree = "<group>"; };
+		A166D0DA205B86E800E21D98 /* SimpleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleModels.swift; sourceTree = "<group>"; };
+		A166D0DC205B993300E21D98 /* PhilinqSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilinqSDK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A166D0C4205B790A00E21D98 /* EasyJSON.framework in Frameworks */,
+				A166D0C5205B790A00E21D98 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +70,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15A96DA205B488200332A55 /* SimpleSDK.framework in Frameworks */,
+				A166D0DF205C341100E21D98 /* EasyJSON.framework in Frameworks */,
+				A166D0E1205C3FB800E21D98 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +84,7 @@
 				A15A96D2205B488200332A55 /* SimpleSDK */,
 				A15A96DD205B488200332A55 /* SimpleSDKTests */,
 				A15A96D1205B488200332A55 /* Products */,
+				A166D0C1205B790A00E21D98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +100,9 @@
 		A15A96D2205B488200332A55 /* SimpleSDK */ = {
 			isa = PBXGroup;
 			children = (
+				A166D0CD205B7E6D00E21D98 /* Helpers */,
+				A166D0C8205B7A2900E21D98 /* SDK */,
+				A166D0C7205B7A2200E21D98 /* API */,
 				A15A96D3205B488200332A55 /* SimpleSDK.h */,
 				A15A96D4205B488200332A55 /* Info.plist */,
 			);
@@ -82,8 +114,47 @@
 			children = (
 				A15A96DE205B488200332A55 /* SimpleSDKTests.swift */,
 				A15A96E0205B488200332A55 /* Info.plist */,
+				A166D0DC205B993300E21D98 /* PhilinqSDK.swift */,
 			);
 			path = SimpleSDKTests;
+			sourceTree = "<group>";
+		};
+		A166D0C1205B790A00E21D98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A166D0C3205B790A00E21D98 /* Alamofire.framework */,
+				A166D0C2205B790A00E21D98 /* EasyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A166D0C7205B7A2200E21D98 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A166D0D0205B7E9A00E21D98 /* SimpleApiStorage.swift */,
+				A166D0C9205B7A7800E21D98 /* SimpleApi.swift */,
+				A166D0CB205B7B3900E21D98 /* SimpleApiClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A166D0C8205B7A2900E21D98 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				A166D0DA205B86E800E21D98 /* SimpleModels.swift */,
+				A166D0D6205B816300E21D98 /* SimpleSDK.swift */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		A166D0CD205B7E6D00E21D98 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A166D0D1205B7E9A00E21D98 /* Alamofire+Future.swift */,
+				A166D0CE205B7E9A00E21D98 /* Future.swift */,
+				A166D0CF205B7E9A00E21D98 /* Result.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +179,7 @@
 				A15A96CC205B488200332A55 /* Frameworks */,
 				A15A96CD205B488200332A55 /* Headers */,
 				A15A96CE205B488200332A55 /* Resources */,
+				A166D0C6205B794C00E21D98 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -125,6 +197,7 @@
 				A15A96D5205B488200332A55 /* Sources */,
 				A15A96D6205B488200332A55 /* Frameworks */,
 				A15A96D7205B488200332A55 /* Resources */,
+				A166D0E0205C350C00E21D98 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -148,6 +221,7 @@
 				TargetAttributes = {
 					A15A96CF205B488200332A55 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					A15A96D8205B488200332A55 = {
@@ -191,11 +265,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A166D0C6205B794C00E21D98 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/EasyJSON.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/EasyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		A166D0E0205C350C00E21D98 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/EasyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/EasyJSON.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A15A96CB205B488200332A55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A166D0D2205B7E9A00E21D98 /* Future.swift in Sources */,
+				A166D0CC205B7B3900E21D98 /* SimpleApiClient.swift in Sources */,
+				A166D0D3205B7E9A00E21D98 /* Result.swift in Sources */,
+				A166D0D5205B7E9A00E21D98 /* Alamofire+Future.swift in Sources */,
+				A166D0D4205B7E9A00E21D98 /* SimpleApiStorage.swift in Sources */,
+				A166D0DB205B86E800E21D98 /* SimpleModels.swift in Sources */,
+				A166D0CA205B7A7800E21D98 /* SimpleApi.swift in Sources */,
+				A166D0D7205B816300E21D98 /* SimpleSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A166D0DD205B993300E21D98 /* PhilinqSDK.swift in Sources */,
 				A15A96DF205B488200332A55 /* SimpleSDKTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -321,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -334,6 +454,7 @@
 		A15A96E5205B488200332A55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -341,12 +462,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SimpleSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.matadesigns.SimpleSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +482,7 @@
 		A15A96E6205B488200332A55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -362,8 +490,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SimpleSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.matadesigns.SimpleSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -376,8 +509,13 @@
 		A15A96E8205B488200332A55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72NH26LUXP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SimpleSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.matadesigns.SimpleSDKTests;
@@ -390,8 +528,13 @@
 		A15A96E9205B488200332A55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72NH26LUXP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SimpleSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.matadesigns.SimpleSDKTests;
