@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'SimpleSDK'
-    s.version          = '1.0.4'
+    s.version          = '1.0.5'
     s.summary          = 'Designed to help develop an SDK that is built around an API.'
   
   # This description is used to generate tags and improve search results.
