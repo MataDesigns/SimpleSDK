@@ -9,7 +9,7 @@
 import UIKit
 
 public enum ApiVersion: String {
-    case none = "", v1 = "api/v1/", v2 = "api/v2/", v3 = "api/v3/", v4 = "api/v4/", v5 = "api/v5/", v6 = "api/v6/"
+    case none = "", v0 = "api/", v1 = "api/v1/", v2 = "api/v2/", v3 = "api/v3/", v4 = "api/v4/", v5 = "api/v5/", v6 = "api/v6/"
 }
 
 public protocol SimpleApi {

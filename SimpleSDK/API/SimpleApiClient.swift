@@ -10,9 +10,15 @@ import UIKit
 import Alamofire
 
 public typealias JSON = [String: Any]
+public typealias Headers = [String: Any]
+
+public struct JSONResponse {
+    public var body: JSON
+    public var headers: Headers
+}
 
 public enum SimpleApiError: Error {
-    case api(JSON), invalidJson, missingJson
+    case api(JSON), invalidJson, missingJson, invalidHeaaders
 }
 
 open class SimpleApiClient {
@@ -49,13 +55,13 @@ open class SimpleApiClient {
                      _ apiVersion: ApiVersion? = nil,
                      parameters: Parameters? = nil,
                      encoding: Alamofire.ParameterEncoding = JSONEncoding.default,
-                     headers: [String: String]? = nil) -> Future<JSON> {
+                     headers: [String: String]? = nil) -> Future<JSONResponse> {
         let url = buildUrl(relativeUrl, apiVersion?.rawValue)
         
         return Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).validate().responseJSON().then(self.toJson)
     }
     
-    public func toJson(response: Alamofire.DataResponse<Any>) -> Future<JSON> {
+    public func toJson(response: Alamofire.DataResponse<Any>) -> Future<JSONResponse> {
         return Future { completion in
             switch response.result {
             case .failure(let error):
@@ -74,7 +80,11 @@ open class SimpleApiClient {
                 guard let json = data as? JSON else {
                     return completion(.failure(SimpleApiError.invalidJson))
                 }
-                return completion(.success(json))
+                guard let headers = response.response?.allHeaderFields as? [String: Any] else {
+                    return completion(.failure(SimpleApiError.invalidHeaaders))
+                }
+                let jsonResponse = JSONResponse(body: json, headers: headers)
+                return completion(.success(jsonResponse))
             }
             
         }
