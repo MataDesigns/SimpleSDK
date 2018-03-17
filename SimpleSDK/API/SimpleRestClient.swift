@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SimpleRestClient {
+public protocol SimpleRestClient {
     associatedtype Key
     associatedtype Model
 
