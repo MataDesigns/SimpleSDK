@@ -23,6 +23,7 @@
 		A166D0DD205B993300E21D98 /* PhilinqSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0DC205B993300E21D98 /* PhilinqSDK.swift */; };
 		A166D0DF205C341100E21D98 /* EasyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A166D0C2205B790A00E21D98 /* EasyJSON.framework */; };
 		A166D0E1205C3FB800E21D98 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A166D0C3205B790A00E21D98 /* Alamofire.framework */; };
+		A1AA2B56205CBEF600162308 /* SimpleRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA2B55205CBEF600162308 /* SimpleRestClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A166D0D6205B816300E21D98 /* SimpleSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSDK.swift; sourceTree = "<group>"; };
 		A166D0DA205B86E800E21D98 /* SimpleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleModels.swift; sourceTree = "<group>"; };
 		A166D0DC205B993300E21D98 /* PhilinqSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilinqSDK.swift; sourceTree = "<group>"; };
+		A1AA2B55205CBEF600162308 /* SimpleRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRestClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				A166D0D0205B7E9A00E21D98 /* SimpleApiStorage.swift */,
 				A166D0C9205B7A7800E21D98 /* SimpleApi.swift */,
 				A166D0CB205B7B3900E21D98 /* SimpleApiClient.swift */,
+				A1AA2B55205CBEF600162308 /* SimpleRestClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AA2B56205CBEF600162308 /* SimpleRestClient.swift in Sources */,
 				A166D0D2205B7E9A00E21D98 /* Future.swift in Sources */,
 				A166D0CC205B7B3900E21D98 /* SimpleApiClient.swift in Sources */,
 				A166D0D3205B7E9A00E21D98 /* Result.swift in Sources */,

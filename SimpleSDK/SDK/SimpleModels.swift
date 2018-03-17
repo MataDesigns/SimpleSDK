@@ -17,6 +17,7 @@ public protocol SimpleModel {
 public protocol SimpleRestModel {
     associatedtype Key
     var id: Key {get set}
+    
     static func get(id: Key) -> Future<Self>
     static func get() -> Future<Self>
     func update()

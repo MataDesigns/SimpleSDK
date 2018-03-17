@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'SimpleSDK'
-    s.version          = '0.0.1'
+    s.version          = '1.0.1'
     s.summary          = 'Designed to help develop an SDK that is built around an API.'
   
   # This description is used to generate tags and improve search results.
@@ -30,5 +30,8 @@ Pod::Spec.new do |s|
   
     s.source_files = 'SimpleSDK/**/*'
   
-    s.frameworks =  'Foundation, Alamofire, EasyJSON'
+    s.frameworks =  'Foundation'
+
+    s.dependency 'Alamofire' 
+    s.dependency 'EasyJSON'
   end
