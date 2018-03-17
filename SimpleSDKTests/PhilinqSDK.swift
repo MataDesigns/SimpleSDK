@@ -45,13 +45,13 @@ class PhilinqStorage: SimpleApiStorage {
     }
 }
 
-class PhilinqApi: SimpleApi {
-    static var clientId: String? = ""
-    
-    static var clientSecret: String? = ""
-    
-    static var responseQueue: DispatchQueue = DispatchQueue(label: "com.philinq.apiresponse", qos: .utility, attributes: [.concurrent])
-}
+//class PhilinqApi: SimpleApi {
+//    static var clientId: String? = ""
+//
+//    static var clientSecret: String? = ""
+//
+//    static var responseQueue: DispatchQueue = DispatchQueue(label: "com.philinq.apiresponse", qos: .utility, attributes: [.concurrent])
+//}
 
 class MillenniumStoreModel: EasyModel, SimpleModel {
     var id: String!
@@ -59,12 +59,15 @@ class MillenniumStoreModel: EasyModel, SimpleModel {
     var lastImport: Date?
 }
 
-class MillenniumClient: SimpleApiClient {
+class MillenniumClient: SimpleJsonClient {
     func last() -> Future<MillenniumStoreModel> {
         return Future { completion in
-            self.jsonRequest(.get, "\(PhilinqStorage.storeId)/millennium/last", .v3, headers: PhilinqStorage.tokenHeader).subscribe(onNext: { (json) in
+            self.jsonRequest(.get, "\(PhilinqStorage.storeId)/millennium/last", .v3, headers: PhilinqStorage.tokenHeader).subscribe(onNext: { (jResponse) in
                 let storeModel = MillenniumStoreModel()
-                storeModel.fill(withDict: json)
+                guard case Json.object(let jsonObject) = jResponse.body else {
+                    return completion(.failure(SimpleJsonError.jsonRootMismatch))
+                }
+                storeModel.fill(withDict: jsonObject)
                 completion(.success(storeModel))
             }, onError: { (error) in
                 completion(.failure(error))
@@ -97,12 +100,15 @@ class LoginModel: EasyModel {
     var phoneNumber: String?
 }
 
-class AuthClient: SimpleApiClient {
+class AuthClient: SimpleJsonClient {
     func login(model: LoginRequest) -> Future<LoginModel> {
         return Future { completion in
-            self.request(.post, "api/token", .none, parameters: model.toJson()).responseJSON().then(self.toJson).subscribe(onNext: { (json) in
+            self.request(.post, "token", .none, parameters: model.toJson()).responseJSON().then(self.toJson).subscribe(onNext: { (jresponse) in
+                guard case Json.object(let jsonObject) = jresponse.body else {
+                    return completion(.failure(SimpleJsonError.jsonRootMismatch))
+                }
                 let model = LoginModel()
-                model.fill(withDict: json)
+                model.fill(withDict: jsonObject)
                 PhilinqStorage.accessToken = model.accessToken
                 completion(.success(model))
             }, onError: { (error) in

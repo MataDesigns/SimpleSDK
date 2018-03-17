@@ -12,7 +12,7 @@
 		A15A96E1205B488200332A55 /* SimpleSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = A15A96D3205B488200332A55 /* SimpleSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A166D0C4205B790A00E21D98 /* EasyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A166D0C2205B790A00E21D98 /* EasyJSON.framework */; };
 		A166D0C5205B790A00E21D98 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A166D0C3205B790A00E21D98 /* Alamofire.framework */; };
-		A166D0CA205B7A7800E21D98 /* SimpleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0C9205B7A7800E21D98 /* SimpleApi.swift */; };
+		A166D0CA205B7A7800E21D98 /* ApiVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0C9205B7A7800E21D98 /* ApiVersion.swift */; };
 		A166D0CC205B7B3900E21D98 /* SimpleApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0CB205B7B3900E21D98 /* SimpleApiClient.swift */; };
 		A166D0D2205B7E9A00E21D98 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0CE205B7E9A00E21D98 /* Future.swift */; };
 		A166D0D3205B7E9A00E21D98 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166D0CF205B7E9A00E21D98 /* Result.swift */; };
@@ -24,6 +24,11 @@
 		A166D0DF205C341100E21D98 /* EasyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A166D0C2205B790A00E21D98 /* EasyJSON.framework */; };
 		A166D0E1205C3FB800E21D98 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A166D0C3205B790A00E21D98 /* Alamofire.framework */; };
 		A1AA2B56205CBEF600162308 /* SimpleRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA2B55205CBEF600162308 /* SimpleRestClient.swift */; };
+		A1AA2B68205D91FC00162308 /* SimpleApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA2B67205D91FC00162308 /* SimpleApiResponse.swift */; };
+		A1AA2B6A205D926600162308 /* SimpleJsonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA2B69205D926600162308 /* SimpleJsonResponse.swift */; };
+		A1AA2B6D205DC12A00162308 /* SimpleJsonClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA2B6C205DC12A00162308 /* SimpleJsonClient.swift */; };
+		A1AA2B6F205DC1D200162308 /* SimpleApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA2B6E205DC1D200162308 /* SimpleApiError.swift */; };
+		A1AA2B71205DC57500162308 /* SimpleJsonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA2B70205DC57500162308 /* SimpleJsonError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +50,7 @@
 		A15A96E0205B488200332A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A166D0C2205B790A00E21D98 /* EasyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyJSON.framework; path = Carthage/Build/iOS/EasyJSON.framework; sourceTree = "<group>"; };
 		A166D0C3205B790A00E21D98 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		A166D0C9205B7A7800E21D98 /* SimpleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleApi.swift; sourceTree = "<group>"; };
+		A166D0C9205B7A7800E21D98 /* ApiVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiVersion.swift; sourceTree = "<group>"; };
 		A166D0CB205B7B3900E21D98 /* SimpleApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleApiClient.swift; sourceTree = "<group>"; };
 		A166D0CE205B7E9A00E21D98 /* Future.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
 		A166D0CF205B7E9A00E21D98 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -55,6 +60,11 @@
 		A166D0DA205B86E800E21D98 /* SimpleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleModels.swift; sourceTree = "<group>"; };
 		A166D0DC205B993300E21D98 /* PhilinqSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhilinqSDK.swift; sourceTree = "<group>"; };
 		A1AA2B55205CBEF600162308 /* SimpleRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRestClient.swift; sourceTree = "<group>"; };
+		A1AA2B67205D91FC00162308 /* SimpleApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleApiResponse.swift; sourceTree = "<group>"; };
+		A1AA2B69205D926600162308 /* SimpleJsonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleJsonResponse.swift; sourceTree = "<group>"; };
+		A1AA2B6C205DC12A00162308 /* SimpleJsonClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleJsonClient.swift; sourceTree = "<group>"; };
+		A1AA2B6E205DC1D200162308 /* SimpleApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleApiError.swift; sourceTree = "<group>"; };
+		A1AA2B70205DC57500162308 /* SimpleJsonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleJsonError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +143,13 @@
 		A166D0C7205B7A2200E21D98 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A1AA2B6B205DC11400162308 /* JSON */,
+				A166D0C9205B7A7800E21D98 /* ApiVersion.swift */,
 				A166D0D0205B7E9A00E21D98 /* SimpleApiStorage.swift */,
-				A166D0C9205B7A7800E21D98 /* SimpleApi.swift */,
 				A166D0CB205B7B3900E21D98 /* SimpleApiClient.swift */,
 				A1AA2B55205CBEF600162308 /* SimpleRestClient.swift */,
+				A1AA2B67205D91FC00162308 /* SimpleApiResponse.swift */,
+				A1AA2B6E205DC1D200162308 /* SimpleApiError.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -153,11 +166,21 @@
 		A166D0CD205B7E6D00E21D98 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A166D0D1205B7E9A00E21D98 /* Alamofire+Future.swift */,
 				A166D0CE205B7E9A00E21D98 /* Future.swift */,
 				A166D0CF205B7E9A00E21D98 /* Result.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A1AA2B6B205DC11400162308 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A166D0D1205B7E9A00E21D98 /* Alamofire+Future.swift */,
+				A1AA2B69205D926600162308 /* SimpleJsonResponse.swift */,
+				A1AA2B6C205DC12A00162308 /* SimpleJsonClient.swift */,
+				A1AA2B70205DC57500162308 /* SimpleJsonError.swift */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,15 +333,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AA2B71205DC57500162308 /* SimpleJsonError.swift in Sources */,
+				A1AA2B6D205DC12A00162308 /* SimpleJsonClient.swift in Sources */,
 				A1AA2B56205CBEF600162308 /* SimpleRestClient.swift in Sources */,
 				A166D0D2205B7E9A00E21D98 /* Future.swift in Sources */,
 				A166D0CC205B7B3900E21D98 /* SimpleApiClient.swift in Sources */,
 				A166D0D3205B7E9A00E21D98 /* Result.swift in Sources */,
 				A166D0D5205B7E9A00E21D98 /* Alamofire+Future.swift in Sources */,
 				A166D0D4205B7E9A00E21D98 /* SimpleApiStorage.swift in Sources */,
+				A1AA2B6F205DC1D200162308 /* SimpleApiError.swift in Sources */,
+				A1AA2B6A205D926600162308 /* SimpleJsonResponse.swift in Sources */,
 				A166D0DB205B86E800E21D98 /* SimpleModels.swift in Sources */,
-				A166D0CA205B7A7800E21D98 /* SimpleApi.swift in Sources */,
+				A166D0CA205B7A7800E21D98 /* ApiVersion.swift in Sources */,
 				A166D0D7205B816300E21D98 /* SimpleSDK.swift in Sources */,
+				A1AA2B68205D91FC00162308 /* SimpleApiResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
