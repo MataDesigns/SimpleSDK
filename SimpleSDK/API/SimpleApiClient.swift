@@ -9,8 +9,13 @@
 import UIKit
 import Alamofire
 
-public typealias JSON = [String: Any]
+public typealias JSONObject = [String: Any]
 public typealias Headers = [String: Any]
+
+public enum JSON {
+    case object(JSONObject)
+    case array([JSONObject])
+}
 
 public struct JSONResponse {
     public var body: JSON
@@ -40,22 +45,22 @@ open class SimpleApiClient {
     }
     
     public func request(_ method: Alamofire.HTTPMethod,
-                 _ relativeUrl: String,
-                 _ apiVersion: ApiVersion? = nil,
-                 parameters: Parameters? = nil,
-                 encoding: Alamofire.ParameterEncoding = URLEncoding.default,
-                 headers: [String: String]? = nil) -> Alamofire.DataRequest {
+                        _ relativeUrl: String,
+                        _ apiVersion: ApiVersion? = nil,
+                        parameters: Parameters? = nil,
+                        encoding: Alamofire.ParameterEncoding = URLEncoding.default,
+                        headers: [String: String]? = nil) -> Alamofire.DataRequest {
         let url = buildUrl(relativeUrl, apiVersion?.rawValue)
         
         return Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).validate()
     }
     
     public func jsonRequest(_ method: Alamofire.HTTPMethod,
-                     _ relativeUrl: String,
-                     _ apiVersion: ApiVersion? = nil,
-                     parameters: Parameters? = nil,
-                     encoding: Alamofire.ParameterEncoding = JSONEncoding.default,
-                     headers: [String: String]? = nil) -> Future<JSONResponse> {
+                            _ relativeUrl: String,
+                            _ apiVersion: ApiVersion? = nil,
+                            parameters: Parameters? = nil,
+                            encoding: Alamofire.ParameterEncoding = JSONEncoding.default,
+                            headers: [String: String]? = nil) -> Future<JSONResponse> {
         let url = buildUrl(relativeUrl, apiVersion?.rawValue)
         
         return Alamofire.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).validate().responseJSON().then(self.toJson)
@@ -69,21 +74,35 @@ open class SimpleApiClient {
                     return completion(.failure(error))
                 }
                 do {
-                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? JSON else {
-                        return completion(.failure(SimpleApiError.invalidJson))
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    var error: SimpleApiError
+                    switch json {
+                    case let jsonObject as JSONObject:
+                        let json = JSON.object(jsonObject)
+                        error = SimpleApiError.api(json)
+                    case let jsonArray as [JSONObject]:
+                        let json = JSON.array(jsonArray)
+                        error = SimpleApiError.api(json)
+                    default:
+                        error = SimpleApiError.invalidJson
                     }
-                    return completion(.failure(SimpleApiError.api(json)))
+                    return completion(.failure(error))
                 } catch {
                     return completion(.failure(error))
                 }
             case .success(let data):
-                guard let json = data as? JSON else {
-                    return completion(.failure(SimpleApiError.invalidJson))
-                }
                 guard let headers = response.response?.allHeaderFields as? [String: Any] else {
                     return completion(.failure(SimpleApiError.invalidHeaaders))
                 }
-                let jsonResponse = JSONResponse(body: json, headers: headers)
+                var jsonResponse: JSONResponse
+                switch data {
+                case let json as JSONObject:
+                    jsonResponse = JSONResponse(body: JSON.object(json), headers: headers)
+                case let jsonArray as [JSONObject]:
+                    jsonResponse = JSONResponse(body: JSON.array(jsonArray), headers: headers)
+                default:
+                    return completion(.failure(SimpleApiError.invalidJson))
+                }
                 return completion(.success(jsonResponse))
             }
             
