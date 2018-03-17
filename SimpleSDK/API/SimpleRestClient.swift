@@ -13,7 +13,7 @@ public protocol SimpleRestClient {
     associatedtype Model
 
     func get(id: Key) -> Future<Model>
-    func get() -> Future<Model>
-    func update() -> Future<Model>
-    func delete()
+    func get() -> Future<Array<Model>>
+    func update(model: Model) -> Future<Model>
+    func delete(model: Model)
 }
