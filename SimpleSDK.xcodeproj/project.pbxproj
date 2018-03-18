@@ -29,6 +29,7 @@
 		A1AA2B6D205DC12A00162308 /* SimpleJsonClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA2B6C205DC12A00162308 /* SimpleJsonClient.swift */; };
 		A1AA2B6F205DC1D200162308 /* SimpleApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA2B6E205DC1D200162308 /* SimpleApiError.swift */; };
 		A1AA2B71205DC57500162308 /* SimpleJsonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA2B70205DC57500162308 /* SimpleJsonError.swift */; };
+		A1AA2B73205DD40D00162308 /* SimpleStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA2B72205DD40D00162308 /* SimpleStatusCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		A1AA2B6C205DC12A00162308 /* SimpleJsonClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleJsonClient.swift; sourceTree = "<group>"; };
 		A1AA2B6E205DC1D200162308 /* SimpleApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleApiError.swift; sourceTree = "<group>"; };
 		A1AA2B70205DC57500162308 /* SimpleJsonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleJsonError.swift; sourceTree = "<group>"; };
+		A1AA2B72205DD40D00162308 /* SimpleStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStatusCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				A1AA2B55205CBEF600162308 /* SimpleRestClient.swift */,
 				A1AA2B67205D91FC00162308 /* SimpleApiResponse.swift */,
 				A1AA2B6E205DC1D200162308 /* SimpleApiError.swift */,
+				A1AA2B72205DD40D00162308 /* SimpleStatusCode.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				A1AA2B6F205DC1D200162308 /* SimpleApiError.swift in Sources */,
 				A1AA2B6A205D926600162308 /* SimpleJsonResponse.swift in Sources */,
 				A166D0DB205B86E800E21D98 /* SimpleModels.swift in Sources */,
+				A1AA2B73205DD40D00162308 /* SimpleStatusCode.swift in Sources */,
 				A166D0CA205B7A7800E21D98 /* ApiVersion.swift in Sources */,
 				A166D0D7205B816300E21D98 /* SimpleSDK.swift in Sources */,
 				A1AA2B68205D91FC00162308 /* SimpleApiResponse.swift in Sources */,
