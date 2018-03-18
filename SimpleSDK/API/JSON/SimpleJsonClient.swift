@@ -29,7 +29,10 @@ open class SimpleJsonClient: SimpleApiClient {
             }
             let statusCode = urlResponse.statusCode
             let headers = urlResponse.allHeaderFields
-            
+            guard statusCode != SimpleStatusCode.NoContent.rawValue else  {
+                let jsonResponse = SimpleJsonResponse(body: .empty, headers: headers, statusCode: statusCode)
+                return completion(.success(jsonResponse))
+            }
             switch response.result {
             case .failure(let error):
                 guard let data = response.data else {

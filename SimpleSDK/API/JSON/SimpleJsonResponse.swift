@@ -13,13 +13,14 @@ public typealias JsonObject = [String: Any]
 public enum Json {
     case object(JsonObject)
     case array([JsonObject])
+    case empty
     
     static func from(_ data: Any) -> Json? {
         switch data {
         case let jsonObject as JsonObject:
-            return Json.object(jsonObject)
+            return .object(jsonObject)
         case let jsonArray as [JsonObject]:
-            return Json.array(jsonArray)
+            return .array(jsonArray)
         default:
             return nil
         }
