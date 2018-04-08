@@ -18,7 +18,7 @@ enum SimpleStatusCode: Int {
     case Created
     case Accepted
     case NonAuthoritativeInformation
-    case NoContent
+//    case NoContent
     case ResetContent
     case PartialContent
     case MultiStatus

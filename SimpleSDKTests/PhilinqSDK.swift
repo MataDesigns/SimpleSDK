@@ -63,11 +63,11 @@ class MillenniumClient: SimpleJsonClient {
     func last() -> Future<MillenniumStoreModel> {
         return Future { completion in
             self.jsonRequest(.get, "\(PhilinqStorage.storeId)/millennium/last", .v3, headers: PhilinqStorage.tokenHeader).subscribe(onNext: { (jResponse) in
-                let storeModel = MillenniumStoreModel()
                 guard case Json.object(let jsonObject) = jResponse.body else {
                     return completion(.failure(SimpleJsonError.jsonRootMismatch))
                 }
-                storeModel.fill(withDict: jsonObject)
+                var storeModel = MillenniumStoreModel()
+                try? storeModel.fill(withDict: jsonObject)
                 completion(.success(storeModel))
             }, onError: { (error) in
                 completion(.failure(error))
@@ -77,9 +77,8 @@ class MillenniumClient: SimpleJsonClient {
 }
 
 class LoginRequest: EasyModel {
-    
-    override var snakeCased: Bool {
-        return true
+    override var _options_: EasyModelOptions {
+        return EasyModelOptions(snakeCased: true)
     }
     
     var grantType: String = "password"
@@ -88,8 +87,8 @@ class LoginRequest: EasyModel {
 }
 
 class LoginModel: EasyModel {
-    override var snakeCased: Bool {
-        return true
+    override var _options_: EasyModelOptions {
+        return EasyModelOptions(snakeCased: true)
     }
     
     var accessToken: String?
@@ -107,8 +106,8 @@ class AuthClient: SimpleJsonClient {
                 guard case Json.object(let jsonObject) = jresponse.body else {
                     return completion(.failure(SimpleJsonError.jsonRootMismatch))
                 }
-                let model = LoginModel()
-                model.fill(withDict: jsonObject)
+                var model = LoginModel()
+                try? model.fill(withDict: jsonObject)
                 PhilinqStorage.accessToken = model.accessToken
                 completion(.success(model))
             }, onError: { (error) in
